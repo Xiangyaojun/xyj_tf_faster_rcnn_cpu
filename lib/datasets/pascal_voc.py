@@ -37,10 +37,10 @@ class pascal_voc(imdb):
                        "名爵", "雷诺", "雷克萨斯", "宝马", "马自达", "奔驰")
     if year == "2014":
       self._classes = ('__background__',  # always index 0
-                       "venucia", "福特", "斯柯达", "启辰", "本田", "日产", "凯迪拉克", "铃木",
-                       "吉利", "保时捷", "jeep", "宝骏", "荣威", "林肯", "丰田", "别克",
-                       "奇瑞", "起亚", "哈弗", "奥迪", "路虎", "大众", "广汽传祺", "长安",
-                       "名爵", "雷诺", "雷克萨斯", "宝马", "马自达", "奔驰")
+                       'suzuki', 'mg', 'nissan', 'cadillac', 'honda', 'haval', 'porsche', 'benz', 'mazda', 'roewe',
+                       'lincoln', 'chana', 'lexus', 'paojun', 'trumpchi', 'geely', 'kia', 'toyota', 'venucia',
+                       'land rover', 'volkswagen', 'baic', 'skoda', 'bmw', 'chery', 'buick', 'jeep', 'ford', 'audi',
+                       'renault')
     self._class_to_ind = dict(list(zip(self.classes, list(range(self.num_classes)))))
     self._image_ext = '.jpg'
     self._image_index = self._load_image_set_index()
