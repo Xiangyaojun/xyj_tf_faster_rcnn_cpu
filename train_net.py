@@ -63,7 +63,9 @@ if __name__ == '__main__':
 
   # roidb：所有训练图片的gt_boxes
   # imdb：训练数据集的相关信息：包括类别列表，所有的图片名称的索引，数据集名称等等
-  imdb, roidb = combined_roidb(train_datset_name)
+  imdb, roidb = combined_roidb("gridsum_car_train")
+  print(roidb[0]['boxes'])
+  print(roidb[0])
   print('{:d} roidb entries'.format(len(roidb)))
   # output directory where the models are saved
   output_dir = get_output_dir(imdb, "")
@@ -72,7 +74,7 @@ if __name__ == '__main__':
   tb_dir = get_output_tb_dir(imdb, "")
   # 同样的方法载入val数据集
   print('TensorFlow summaries will be saved to `{:s}`'.format(tb_dir))
-  _, valroidb = combined_roidb(val_dataset_name)
+  _, valroidb = combined_roidb("gridsum_car_train")
   print('{:d} validation roidb entries'.format(len(valroidb)))
 
   if arg_net == 'vgg16':
